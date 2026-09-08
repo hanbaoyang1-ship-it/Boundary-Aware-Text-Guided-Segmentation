@@ -1,0 +1,52 @@
+seed: 42
+deterministic: false
+device: auto
+
+model:
+  clip_model: openai/clip-vit-base-patch32
+  local_files_only: false
+  freeze_clip: false
+  pretrained_backbone: true
+
+data:
+  image_size: 224
+  image_column: image
+  text_column: text
+  mask_column: null
+  rotation_limit: 20
+  flip_probability: 0.5
+  train:
+    images_dir: ../data/QaTa-COV19/images
+    masks_dir: ../data/QaTa-COV19/masks
+    metadata: ../data/QaTa-COV19/train.xlsx
+  val:
+    images_dir: ../data/QaTa-COV19/images
+    masks_dir: ../data/QaTa-COV19/masks
+    metadata: ../data/QaTa-COV19/val.xlsx
+  test:
+    images_dir: ../data/QaTa-COV19/images
+    masks_dir: ../data/QaTa-COV19/masks
+    metadata: ../data/QaTa-COV19/test.xlsx
+
+contrastive:
+  temperature: 0.07
+  samples_per_level: 10
+  initial_weight: 0.5
+  max_weight: 0.5
+  warmup_epochs: 0
+
+training:
+  epochs: 120
+  batch_size: 8
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  lr_factor: 0.5
+  lr_patience: 10
+  min_lr: 0.000001
+  num_workers: 4
+  amp: false
+  output_dir: runs/qatacov19
+
+evaluation:
+  batch_size: 8
+  num_workers: 4
