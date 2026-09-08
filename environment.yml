@@ -1,0 +1,12 @@
+name: bacl-covid19
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - pytorch>=2.1
+  - torchvision>=0.16
+  - pip:
+      - -r requirements.txt

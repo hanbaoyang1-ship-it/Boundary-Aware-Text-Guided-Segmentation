@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Environments and secrets
+.venv/
+venv/
+env/
+.env
+.env.*
+*.pem
+*.key
+
+# Editors and OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Datasets (keep documentation)
+data/**
+!data/README.md
+
+# Model weights and experiment outputs
+*.pt
+*.pth
+*.ckpt
+*.onnx
+runs/
+results/
+outputs/
+logs/
+wandb/
+mlruns/
+tensorboard/
+*.log
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.bak

@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the accompanying manuscript."
+title: "Boundary-Aware Contrastive Learning for Text-Guided COVID-19 Segmentation in Chest X-Ray and CT Images"
+type: software
+authors:
+  - family-names: Han
+    given-names: Baoyang
+  - family-names: Wei
+    given-names: Jia
+version: 1.0.0
+date-released: 2026-09-08
+license: MIT
+keywords:
+  - medical image segmentation
+  - vision-language learning
+  - contrastive learning
+  - COVID-19
