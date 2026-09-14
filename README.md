@@ -9,11 +9,6 @@ The model combines a three-stage VGG16 encoder-decoder, CLIP text embeddings, a 
 
 ![Architecture](assets/architecture.png)
 
-## Reproducibility status
-
-This repository was reconstructed from the manuscript and the supplied three-file research snapshot. It fixes several material mismatches in that snapshot, including unused contrastive projection heads, the reversed attention multiplication, a non-1x1 output head, broken left/right text augmentation, incomplete checkpointing, and missing inference/evaluation code.
-
-Because these corrections alter trainable computation, **old checkpoints are not compatible and the paper's reported scores have not been independently reproduced with this release**. Retrain and regenerate per-case results before associating a release tag with the manuscript's tables. See [the full consistency audit](docs/METHOD_CODE_AUDIT.md).
 
 ## Repository layout
 
